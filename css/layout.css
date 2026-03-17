@@ -1,0 +1,367 @@
+:root {
+    /* Fundos */
+    --bg-cor-roxa: #9703d1;
+    --bg-cor-secudanria: #000000;
+    --bg-cor-roxa-escura: #d78af5;
+
+    /* Destaque */
+    --cor-destaque: #22c55e;
+    --cor-destaque-sec: #16a34a;
+
+    /* Texto e Bordar */
+    --cor-clara: #f8fafc;
+    --cor-cinza-claro: #bfc3ca;
+    --cor-texto-sec: #94a3b8;
+    --cor-texto-escuro: #1f2225;
+
+    /* Tipografia */
+    --fonte-padrao: Arial, Helvetica, sans-serif;
+    --fonte-menu-size: 16px;
+
+    /* Espaçamentos */
+    --padding-cartao: 25px;
+    --padding-padrao: 40px;
+    --padding-sessao: 80px;
+    --gap-padrao: 25px;
+
+
+    /* Bordas */
+    --borda-arredondada: 12px;
+
+}
+
+/* Configurações Básicas */
+
+
+
+* {
+    /*Prenchimento*/
+    padding: 0;
+    /* Margem */
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Fonte da página */
+    font-family: var(--fonte-padrao);
+    /* Define o espaçamento entre as linhas */
+    line-height: 1.8;
+}
+
+.menu {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-cor-secudanria);
+    color: var(--cor-clara);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--cor-clara);
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 5px 10px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    display: block;
+    padding: 15px 4px;
+}
+
+.menu li a:hover {
+    color: var(--bg-cor-roxa);
+    border-bottom: var(--bg-cor-roxa) 1px solid;
+}
+
+/* Main */
+
+.page-title {
+    background: linear-gradient(150deg, var(--bg-cor-secudanria), var(--bg-cor-secudanria), var(--bg-cor-roxa));
+    color: var(--cor-clara);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.page-title-full {
+    height: 100vh;
+}
+
+.page-title h1 {
+    font-size: 50px;
+    max-width: 700px;
+}
+
+.page-title p {
+    font-size: 20px;
+    opacity: 0.6;
+    max-width: 500px;
+}
+
+/* Sessao */
+.sessao {
+    padding: var(--padding-sessao) var(--padding-padrao);
+    text-align: center;
+    background-color: var(--bg-cor-roxa);
+
+}
+
+.sessao h2 {
+    margin-bottom: 20px;
+}
+
+.destaque {
+    background-color: var(--bg-cor-roxa);
+}
+
+/* Botões */
+
+
+/* Cartões */
+
+.cartoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: var(--gap-padrao);
+}
+
+.cartao {
+    background-color: var(--cor-clara);
+    padding: var(--padding-padrao);
+    border-radius: var(--borda-arredondada);
+    box-shadow: 0 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.cartao:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 2px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* Cartão Serviço */
+.cartao-serv {
+    width: 300px;
+}
+
+/* Cartão depoimento */
+.cartao-dep {
+    width: 350px;
+}
+
+.cartao-dep p {
+    font-size: 14px;
+    color: var(--bg-cor-secudanria);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.cartao-dep strong {
+    display: block;
+    color: var(--cor-texto-escuro);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Redes Sociais */
+
+.sessao .subtitulo {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: var(--cor-texto-escuro);
+    opacity: 0.8;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-padrao);
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.rede {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    border-radius: var(--borda-arredondada);
+    background-color: var(--bg-cor-secudanria);
+    color: var(--cor-clara);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.rede.instagram {
+    background-color: #e1306c;
+}
+
+.rede.instagram:hover {
+    background-color: #c72c60;
+}
+
+.rede.whatsapp {
+    background-color: #25d366;
+}
+
+.rede.whatsapp:hover {
+    background-color: #1ebe5d;
+}
+
+.rede.facebook {
+    background-color: #1877f2;
+}
+
+.rede.facebook:hover {
+    background-color: #1666d1;
+}
+
+.rede i {
+    font-size: 18px;
+}
+
+.rede:hover {
+    transform: translateY(-3px);
+
+}
+
+/* Rodapé */
+.footer {
+    width: 100%;
+    background-color: var(--bg-cor-secudanria);
+    color: var(--cor-clara);
+    text-align: center;
+    margin: 0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-logo span {
+    color: var(--cor-destaque);
+}
+
+.footer-texto {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Responsividade (Adaptar as telas) */
+
+
+/* Desktop grande ou TV */
+
+/* Tablet até 1024px */
+
+@media (max-width:1024px) {
+    main {
+        display: flex;
+    }
+
+    /* Posição  */
+
+    /* Menu  */
+    .menu {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 80px;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .menu .logo{
+        position: sticky;
+        top: 20px;
+    }
+
+    .menu p{
+        display: none;
+    }
+
+    .menu ul li a{
+        font-size: 22px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        position: sticky;
+        top: 70px;
+    }
+
+    .menu a span{
+        display:none;
+    }
+
+    .cartao-dep{
+        width: 90%;
+    }
+}
+
+
+/* Celular 768px */
+
+@media (max-width: 768px){
+    .menu{
+        position: fixed;
+        top: auto;
+        height: auto;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 400px;
+        z-index: 2000;
+        flex-direction: row;
+        border-radius: 30px;
+        justify-content: center;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 0;
+        
+    }
+
+    .menu ul{
+        flex-direction: row;
+
+    }
+
+    .menu il a{
+        text-shadow: 0 2px 4px rgba(240, 240, 240, 0.3);
+    }
+    
+    body{
+        margin-bottom: 100px;
+    }
+
+}
