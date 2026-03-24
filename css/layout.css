@@ -23,6 +23,7 @@
     --padding-padrao: 40px;
     --padding-sessao: 80px;
     --gap-padrao: 25px;
+    --altura-menu: 70px;
 
 
     /* Bordas */
@@ -54,6 +55,7 @@ body {
 }
 
 .menu {
+    height: var(--altura-menu);
     position: sticky;
     top: 0;
     background-color: var(--bg-cor-secudanria);
@@ -108,7 +110,11 @@ body {
 }
 
 .page-title-full {
-    height: 100vh;
+    height: calc(100vh - var(--altura-menu));
+    background-image: url(../img/academia.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    bac
 }
 
 .page-title h1 {
@@ -281,6 +287,13 @@ body {
 
 
 /* Desktop grande ou TV */
+
+@media (min-width: 1200px){
+    .sessao{
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
 
 /* Tablet até 1024px */
 
